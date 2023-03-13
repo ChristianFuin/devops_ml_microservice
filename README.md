@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg&circle-token=<2e58798a1d3f95a540ee8f82129fca93e82bc649>)](<LINK>)
+[![CircleCI](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg&circle-token=2e58798a1d3f95a540ee8f82129fca93e82bc649)](<LINK>)
 
 ## Project Overview
 

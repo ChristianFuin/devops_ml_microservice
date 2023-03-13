@@ -2,8 +2,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: python:3.7.3-stretch
-      working_directory: ~/repo
+       - image: circleci/node:13.8.0
+      working_directory: '~/repo'
       steps:
         - checkout
         - restore_cache:

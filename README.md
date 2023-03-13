@@ -1,4 +1,6 @@
-[![CircleCI]circle-token=2e58798a1d3f95a540ee8f82129fca93e82bc649)]
+
+[![CircleCI](https://circleci.com/gh/ChristianFuin/devops_ml_microservice.svg?style=svg&circle-token=2e58798a1d3f95a540ee8f82129fca93e82bc649)](https://circleci.com/gh/ChristianFuin/devops_ml_microservice)
+
 
 ## Project Overview
 

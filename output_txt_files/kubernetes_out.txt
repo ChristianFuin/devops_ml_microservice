@@ -1,0 +1,31 @@
+fuin@Christians-iMac project-ml-microservice-kubernetes % minikube start
+😄  minikube v1.29.0 on Darwin 13.2.1 (arm64)
+✨  Using the docker driver based on existing profile
+👍  Starting control plane node minikube in cluster minikube
+🚜  Pulling base image ...
+🔄  Restarting existing docker container for "minikube" ...
+🐳  Preparing Kubernetes v1.26.1 on Docker 20.10.23 ...
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: default-storageclass, storage-provisioner
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+fuin@Christians-iMac project-ml-microservice-kubernetes % ./run_kubernetes.sh
+error: failed to create deployment: Deployment.apps "house_prediction" is invalid: metadata.name: Invalid value: "house_prediction": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/house-prediction   1/1     1            1           20h
+
+NAME                                          DESIRED   CURRENT   READY   AGE
+replicaset.apps/house-prediction-79cf46f9c9   1         1         1       20h
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   10d
+
+NAME                                    READY   STATUS    RESTARTS      AGE
+pod/house-prediction-79cf46f9c9-7pskx   1/1     Running   1 (20h ago)   20h
+NAME                                READY   STATUS    RESTARTS      AGE
+house-prediction-79cf46f9c9-7pskx   1/1     Running   1 (20h ago)   20h
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000

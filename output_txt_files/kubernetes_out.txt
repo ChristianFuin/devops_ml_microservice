@@ -29,3 +29,11 @@ Forwarding from 0.0.0.0:8000 -> 80
 Handling connection for 8000
 Handling connection for 8000
 Handling connection for 8000
+
+voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (main) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}

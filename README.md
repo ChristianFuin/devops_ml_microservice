@@ -4,28 +4,23 @@
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+In this project, we have applied all DevOps Skills we learned throughout the Udacity Devops Engineer Course, deploying a Machine Learning Microservice API on a microservice kubernetes environment. 
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+Our pre-trained model has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. The api answers the requests made to /predict accepting a JSON payload with the features data listed above, returning then a predicted house price.
 
-### Project Tasks
+## Files Structure
+1. .circleci - folder containing CI/CD jobs for linting
+2. model_data - folder containing data to train the model
+3. output_text - folder containing log from Flask application and model prediction
+4. Dockerfile - file containing docker image that installs necessary libraries, creates directory, copies data into the directory and starts the web app.
+5. Makefile - Script containing project set up code that helps to maintain your project structure easy to read and use, as well as set up your environment.
+6. requirements.txt - File with all python package necessary to run the project and their versions.
+7. app.py - Flask python application containing Machine Learning Model functions
+8. run_docker.sh - Bash script that builds a docker image, list all images and run the docker container
+9. upload_docker.sh - Bash script that push the docker built image from the previous script to the docker hub.
+10.run_kubernetes.sh - Bash script that pulls the docker image previously uploaded from docker hub and starts a kubernetes container microservice service using the image pulled. It also forwards the port the application is running in the container to the localhost.
 
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
-
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
----
-
-## Setup the Environment
+## Run the Application
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
@@ -43,10 +38,3 @@ source .devops/bin/activate
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
-
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
